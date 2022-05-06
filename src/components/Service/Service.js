@@ -10,7 +10,7 @@ const Service = ({service}) => {
         navigate(`/update/${id}`);
     }
     return (
-        <div className='service p- w-100'>
+        <div className='service p- w-100 shadow'>
             <img className='w-100 h-50' src={img} alt="" />
             <h2>{name}</h2>
             <p>Price: {price}</p>
