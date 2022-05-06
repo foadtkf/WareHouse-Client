@@ -12,6 +12,7 @@ import RequireAuth from './components/RequireAuth/RequireAuth';
 import ManageServices from './components/ManageServices/ManageServices';
 import AddService from './components/AddService/AddService';
 import UpdateProduct from './components/UpdateProduct/UpdateProduct';
+import Blog from './components/Blog/Blog';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
           </RequireAuth>
         }></Route>
 <Route path='update/:id' element={<UpdateProduct></UpdateProduct>}/>
+<Route path='/blog' element={<Blog></Blog>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
