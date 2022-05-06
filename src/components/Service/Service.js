@@ -14,8 +14,11 @@ const Service = ({service}) => {
             <img className='w-100 h-50' src={img} alt="" />
             <h2>{name}</h2>
             <p>Price: {price}</p>
+            <p>Quantity: qty..</p>
+            <p><strong>Supplier Name..</strong></p>
             <p><small>{description}</small></p>
-            <button onClick={() => navigateToServiceDetail(id)} className='btn btn-primary'>Select this package</button>
+
+            <button onClick={() => navigateToServiceDetail(id)} className='btn btn-primary'>Update</button>
         </div>
     );
 };
