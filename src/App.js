@@ -4,6 +4,7 @@ import Home from './components/Home/Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
+import Services from './components/Services/Services';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
       <Route path='/home' element={<Home></Home>}></Route>
+      <Route path='/services' element={<Services></Services>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
