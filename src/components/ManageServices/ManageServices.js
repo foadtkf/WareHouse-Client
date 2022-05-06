@@ -6,7 +6,7 @@ const ManageServices = () => {
 const handleDelete=id=>{
     const proceed =window.confirm('R you sure?')
     if(proceed){
-        fetch(`https://boiling-plateau-02510.herokuapp.com/service/${id}`,{
+        fetch(`http://localhost:5000/service/${id}`,{
             method:'DELETE'})
             .then(res=>res.json())
             .then(data=>{

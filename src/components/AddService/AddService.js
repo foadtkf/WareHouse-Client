@@ -9,7 +9,7 @@ const AddService = () => {
   } = useForm();
   const onSubmit = (data) => {
     console.log(data);
-    const url = `https://boiling-plateau-02510.herokuapp.com/service`;
+    const url = `http://localhost:5000/service`;
     fetch(url, {
       method: "POST",
       headers: {
