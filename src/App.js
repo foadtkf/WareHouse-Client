@@ -10,6 +10,7 @@ import Login from './components/Login/Login';
 import Signup from './components/Signup/Signup';
 import RequireAuth from './components/RequireAuth/RequireAuth';
 import ManageServices from './components/ManageServices/ManageServices';
+import AddService from './components/AddService/AddService';
 
 function App() {
   return (
@@ -25,6 +26,12 @@ function App() {
       <Route path="/manageservice" element={
           <RequireAuth>
             <ManageServices></ManageServices>
+          </RequireAuth>
+        }>
+      </Route>
+        <Route path="/addservice" element={
+          <RequireAuth>
+            <AddService></AddService>
           </RequireAuth>
         }></Route>
       </Routes>

@@ -32,20 +32,20 @@ const Home = () => {
                 />
 
                 <Carousel.Caption>
-                    <h3>Why us?</h3>
-                    <p>We have the best collection of nearly all the laptops in bd</p>
+                    <h3 className='text-dark'>Why us?</h3>
+                    <p className='text-dark'>We have the best collection of nearly all the laptops in bd</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
                 <img
-                    className="d-block w-100"
+                    className="d-block w-100 "
                     src='https://images.unsplash.com/photo-1511385348-a52b4a160dc2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=907&q=80'
                     alt="Third slide"
                 />
 
                 <Carousel.Caption>
-                    <h3>Still confused about choosing?</h3>
-                    <p>
+                    <h3 className='text-dark'>Still confused about choosing?</h3>
+                    <p className='text-dark'>
                     We know what you need and how much you need to fulfil your dream. Pay us a visit and you'll get all your needs
                     </p>
                 </Carousel.Caption>

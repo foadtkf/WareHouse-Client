@@ -23,7 +23,7 @@ const AddService = () => {
       });
   };
   return (
-    <div className="w-50 mx-auto">
+    <div className="w-50 mx-auto my-5">
       <h2>Please add a service: </h2>
       <form className="d-flex flex-column" onSubmit={handleSubmit(onSubmit)}>
         <input className="mb-2" {...register("name")} placeholder="Name" />
@@ -31,6 +31,12 @@ const AddService = () => {
           className="mb-2"
           {...register("price")}
           placeholder="Price"
+          type="number"
+        />
+        <input
+          className="mb-2"
+          {...register("quantity")}
+          placeholder="Quantity"
           type="number"
         />
         <textarea
