@@ -19,7 +19,12 @@ const handleDelete=id=>{
     return (
         <div className='w-50 mx-auto'>
             <h2>We will manage services from here: </h2>
-            
+            {
+                services.map(service=><div key={service._id}>
+                    <h5>{service.name}</h5>
+                    <button onClick={()=>handleDelete(service._id)}>X</button>
+                </div>)
+            }
         </div>
     );
 };

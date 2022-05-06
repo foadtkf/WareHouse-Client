@@ -53,6 +53,7 @@ const Home = () => {
         </Carousel>
         <Services></Services>
         <Contact></Contact>
+        
         </div>
     );
 };
