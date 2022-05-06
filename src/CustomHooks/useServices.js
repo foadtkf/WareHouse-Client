@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react"
 
-const useServices=()=>{
+const useServices=(six)=>{
     const [services,setServices]=useState([])
     useEffect( ()=>{
-        fetch('http://localhost:5000/products')
+        let url=`http://localhost:5000/products${six}`
+        if(!six)
+        url=`http://localhost:5000/products`
+        fetch(url)
         .then(res => res.json())
         .then(data => setServices(data));
     }, [])

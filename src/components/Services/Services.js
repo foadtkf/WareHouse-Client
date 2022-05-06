@@ -3,12 +3,12 @@ import useServices from '../../CustomHooks/useServices';
 import Service from '../Service/Service';
 import './Services.css';
 
-const Services = () => {
+const Services = (props) => {
 
     // const [services, setServices] = useState([]);
+const six=props.val
 
-
-    const [services,setServices]=useServices();
+    const [services,setServices]=useServices(six);
 
     return (
         <div id="services" className='container'>
