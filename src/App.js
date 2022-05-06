@@ -11,6 +11,7 @@ import Signup from './components/Signup/Signup';
 import RequireAuth from './components/RequireAuth/RequireAuth';
 import ManageServices from './components/ManageServices/ManageServices';
 import AddService from './components/AddService/AddService';
+import UpdateProduct from './components/UpdateProduct/UpdateProduct';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
             <AddService></AddService>
           </RequireAuth>
         }></Route>
+<Route path='update/:id' element={<UpdateProduct></UpdateProduct>}/>
       </Routes>
       <Footer></Footer>
     </div>
