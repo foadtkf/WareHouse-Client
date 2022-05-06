@@ -1,4 +1,5 @@
 import React from 'react';
+import { Table,Button } from 'react-bootstrap';
 import useServices from './../../CustomHooks/useServices';
 
 const ManageServices = () => {
@@ -17,14 +18,19 @@ const handleDelete=id=>{
     }
 }
     return (
-        <div className='w-50 mx-auto my-4'>
+        <div className='mx-auto my-4'>
             <h2>Remove any products: </h2>
+            <Table striped bordered hover size="sm">
+                <tbody>
             {
-                services.map(service=><div key={service._id} className='d-flex flex-row w-50 mx-auto p-2 border my-2'>
-                     <h5>{service.name}</h5>
-                    <button onClick={()=>handleDelete(service._id)}>X</button>
-                </div>)
+                services.map(service=>< >
+    <tr key={service._id}>
+      <td ><h5>{service.name}</h5></td>
+      <td><Button variant="danger" onClick={()=>handleDelete(service._id)}>Delete</Button></td>
+    </tr>
+    </>)
             }
+            </tbody>            </Table>
         </div>
     );
 };

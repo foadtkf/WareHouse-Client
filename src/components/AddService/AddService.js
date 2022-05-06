@@ -20,36 +20,37 @@ const AddService = () => {
       .then((res) => res.json())
       .then((result) => {
         console.log(result);
+        alert('item added successfully')
       });
   };
   return (
     <div className="w-50 mx-auto my-5">
       <h2>Please add a service: </h2>
       <form className="d-flex flex-column" onSubmit={handleSubmit(onSubmit)}>
-        <input className="mb-2" {...register("name")} placeholder="Name" />
+        <input className="mb-2" {...register("name")} placeholder="Name" required/>
         <input
           className="mb-2"
           {...register("price")}
           placeholder="Price"
           type="number"
-        />
+        required/>
         <input
           className="mb-2"
           {...register("quantity")}
           placeholder="Quantity"
           type="number"
-        />
+        required/>
         <textarea
           className="mb-2"
           {...register("description")}
           placeholder="Description"
-        />
+        required/>
         <input
           className="mb-2"
           {...register("img")}
           placeholder="Image url"
           type="text"
-        />
+        required/>
         <input type="submit" />
       </form>
     </div>

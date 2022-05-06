@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 import logo from '../../logo.jpg'
 const Header = () => {
   const [user] = useAuthState(auth);
-
+console.log(user)
   const handleSignOut = () => {
     signOut(auth);
   };
@@ -34,6 +34,7 @@ const Header = () => {
                                 user && <>
                                 <Nav.Link as={Link} to="addservice">AddItems</Nav.Link>
                                 <Nav.Link as={Link} to="manageservice">ManageItems</Nav.Link>
+                                <img height={50} src={user.photoURL}alt="" className="rounded-pill"/>
                                 </>
                             }
                             {
