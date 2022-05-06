@@ -8,8 +8,7 @@ const Footer = () => {
         <div className="col-sm-6 col-md-8 mt-5">
           <p style={{ color: "white" }}>
             <strong>
-              {" "}
-              Copyright © 2000-2022 All rights reserved by MrPhotoMan
+              Copyright © 2000-2022 All rights reserved by LaptopDokan
             </strong>
           </p>
         </div>
