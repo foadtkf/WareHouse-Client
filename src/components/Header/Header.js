@@ -17,8 +17,9 @@ console.log(user)
     <>
             <Navbar collapseOnSelect expand="lg" sticky='top' bg="dark" variant="dark">
                 <Container>
-                    <Navbar.Brand as={Link} to="/">
-                        <img height={50} src={logo} alt="" className="rounded-pill"/>
+                    <Navbar.Brand as={Link} to="/" style={{display:'flex'}}>
+                        <img height={50} src={logo} style={{marginRight:'5%'}} alt="" className="rounded-pill"/>
+                        <h3>LTHouse💻</h3>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">

@@ -11,16 +11,16 @@ const MyItems = () => {
     const email = localStorage.getItem(`email`)
     const [services,setServices]=useState([])
     useEffect( ()=>{
-        // let url=`http://localhost:5000/products`
+        // let url=`https://damp-headland-12733.herokuapp.com/products`
         // if(!six)
-        let url=`http://localhost:5000/my?email=${email}`
+        let url=`https://damp-headland-12733.herokuapp.com/my?email=${email}`
         fetch(url)
         .then(res => res.json())
         .then(data => setServices(data));
     }, [])
     return (
         <div style={{minHeight:'100vh'}}>
-            <h2>You have added: {services.length}</h2>
+            <h2>You have added: {services.length} products</h2>
             <Table striped bordered hover size="sm">
                 <tbody>
             {

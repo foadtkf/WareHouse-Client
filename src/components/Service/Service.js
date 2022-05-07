@@ -18,7 +18,6 @@ const Service = ({service}) => {
             <p>Price: {price}</p>
             <p>Quantity: {quantity}</p>
             <p><strong>{brand}</strong></p>
-            <p><small>{description}</small></p>
             <button onClick={() => navigateToUpdate(_id)} className='btn btn-primary'>Update</button>
         </div>
     );
