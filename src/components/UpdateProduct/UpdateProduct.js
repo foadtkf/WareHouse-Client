@@ -51,7 +51,7 @@ fetch(`https://damp-headland-12733.herokuapp.com/products/${id}`)
     )
     }
     return (
-        <div>
+        <div  style={{minHeight:'100vh'}}>
         <h2>Updating Product: {product.name}</h2>
         <button onClick={handleDeliveryproduct}>delivered</button>
         <p>Quantity: {qty}</p>

@@ -24,7 +24,7 @@ const AddService = () => {
       });
   };
   return (
-    <div className="w-50 mx-auto my-5">
+    <div className="w-50 mx-auto my-5"  style={{minHeight:'100vh'}}>
       <h2>Please add a service: </h2>
       <form className="d-flex flex-column" onSubmit={handleSubmit(onSubmit)}>
         <input className="mb-2" {...register("name")} placeholder="Name" required/>

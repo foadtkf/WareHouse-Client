@@ -36,7 +36,9 @@ function App() {
             <AddService></AddService>
           </RequireAuth>
         }></Route>
-<Route path='update/:id' element={<UpdateProduct></UpdateProduct>}/>
+<Route path='update/:id' element={<RequireAuth>
+  <UpdateProduct></UpdateProduct>
+</RequireAuth>}/>
 <Route path='/blog' element={<Blog></Blog>}></Route>
       </Routes>
       <Footer></Footer>

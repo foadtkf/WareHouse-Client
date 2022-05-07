@@ -18,7 +18,7 @@ const handleDelete=id=>{
     }
 }
     return (
-        <div className='mx-auto my-4'>
+        <div className='mx-auto my-4'  style={{minHeight:'100vh'}}>
             <h2>Remove any products: </h2>
             <Table striped bordered hover size="sm">
                 <tbody>
