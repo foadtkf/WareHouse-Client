@@ -31,6 +31,8 @@ const Login = () => {
     }
 
     if (user) {
+        localStorage.setItem('email',user._tokenResponse.email)
+        console.log('>>>>>>',user._tokenResponse.email)
         navigate(from, { replace: true });
     }
 

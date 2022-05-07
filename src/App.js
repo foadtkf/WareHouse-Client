@@ -13,6 +13,7 @@ import ManageServices from './components/ManageServices/ManageServices';
 import AddService from './components/AddService/AddService';
 import UpdateProduct from './components/UpdateProduct/UpdateProduct';
 import Blog from './components/Blog/Blog';
+import MyItems from './components/MyItems/MyItems';
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
   <UpdateProduct></UpdateProduct>
 </RequireAuth>}/>
 <Route path='/blog' element={<Blog></Blog>}></Route>
+<Route path='/myitems' element={<RequireAuth><MyItems></MyItems></RequireAuth>}></Route>
       </Routes>
       <Footer></Footer>
     </div>

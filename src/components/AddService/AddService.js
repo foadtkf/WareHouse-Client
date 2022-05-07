@@ -9,7 +9,7 @@ const AddService = () => {
   } = useForm();
   const onSubmit = (data) => {
     console.log(data);
-    const url = `https://damp-headland-12733.herokuapp.com/service`;
+    const url = `http://localhost:5000/service`;
     fetch(url, {
       method: "POST",
       headers: {
@@ -49,6 +49,12 @@ const AddService = () => {
           className="mb-2"
           {...register("img")}
           placeholder="Image url"
+          type="text"
+        required/>
+        <input
+          className="mb-2"
+          {...register("email")}
+          value={localStorage.getItem('email')}
           type="text"
         required/>
         <input type="submit" />

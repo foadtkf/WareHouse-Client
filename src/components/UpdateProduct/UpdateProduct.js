@@ -6,7 +6,7 @@ const UpdateProduct = () => {
     const [product ,setProduct]=useState({})
     const [qty,setQty] =useState(0)
     useEffect(()=>{
-fetch(`https://damp-headland-12733.herokuapp.com/products/${id}`)
+fetch(`http://localhost:5000/products/${id}`)
 .then(res=>res.json())
 .then(data=>{setProduct(data)
             setQty(data.quantity)})
@@ -18,7 +18,7 @@ fetch(`https://damp-headland-12733.herokuapp.com/products/${id}`)
         if(parseInt(quantity)<1){
             return alert('number of products cannot be less than 0')}
         const updateproduct={quantity}
-        fetch(`https://damp-headland-12733.herokuapp.com/products/${id}`,{
+        fetch(`http://localhost:5000/products/${id}`,{
             method:'PUT',
             headers:{
                 'content-type':'application/json'
@@ -37,7 +37,7 @@ fetch(`https://damp-headland-12733.herokuapp.com/products/${id}`)
         }
         const quantity=parseInt(product.quantity)-1
         const updateproduct={quantity}
-        fetch(`https://damp-headland-12733.herokuapp.com/products/${id}`,{
+        fetch(`http://localhost:5000/products/${id}`,{
             method:'PUT',
             headers:{
                 'content-type':'application/json'

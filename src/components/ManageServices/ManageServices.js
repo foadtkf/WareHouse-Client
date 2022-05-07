@@ -7,7 +7,7 @@ const ManageServices = () => {
 const handleDelete=id=>{
     const proceed =window.confirm('R you sure?')
     if(proceed){
-        fetch(`https://damp-headland-12733.herokuapp.com/service/${id}`,{
+        fetch(`http://localhost:5000/service/${id}`,{
             method:'DELETE'})
             .then(res=>res.json())
             .then(data=>{
@@ -25,6 +25,7 @@ const handleDelete=id=>{
             {
                 services.map(service=>< >
     <tr key={service._id}>
+      <td><img src={service.img} style={{width:'150px',height:'150px'}} alt="" srcset="" /></td>
       <td ><h5>{service.name}</h5></td>
       <td><Button variant="danger" onClick={()=>handleDelete(service._id)}>Delete</Button></td>
     </tr>

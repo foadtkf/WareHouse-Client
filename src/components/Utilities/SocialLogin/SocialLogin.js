@@ -23,7 +23,8 @@ const SocialLogin = () => {
     }
 
     if (user) {
-        console.log(user)
+        localStorage.setItem('email',user._tokenResponse.email)
+        console.log('>>>>>>',user._tokenResponse.email,user.email)
         navigate('/home');navigate(from, { replace: true });
     }
     return (

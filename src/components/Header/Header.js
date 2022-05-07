@@ -11,6 +11,7 @@ const Header = () => {
 console.log(user)
   const handleSignOut = () => {
     signOut(auth);
+    localStorage.setItem('email','')
   };
   return (
     <>
@@ -24,7 +25,7 @@ console.log(user)
                         <Nav className="me-auto">
                             <Nav.Link as={Link} to="home">Home</Nav.Link>
                             <Nav.Link as={Link} to="/services">Items</Nav.Link>
-                            <Nav.Link as={Link} to="/checkout">Inventory</Nav.Link>
+                            <Nav.Link as={Link} to="/myitems">MyItems</Nav.Link>
                             <Nav.Link as={Link} to="about">About</Nav.Link>
 
                         </Nav>

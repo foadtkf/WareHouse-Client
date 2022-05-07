@@ -27,7 +27,9 @@ const Signup = () => {
     }
 
     if (user) {
-     console.log('user', user);  
+        localStorage.setItem('email',user._tokenResponse.email)
+        console.log('>>>>>>',user._tokenResponse.email)
+     console.log('user', user);
     }
 
     const handleRegister = async (event) => {
