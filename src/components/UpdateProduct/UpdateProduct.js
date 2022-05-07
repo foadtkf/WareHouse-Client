@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Button, Col, Container, Row } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
 
 const UpdateProduct = () => {
     const {id} =useParams();
@@ -16,8 +17,6 @@ fetch(`https://damp-headland-12733.herokuapp.com/products/${id}`)
     const handleUpdateproduct=event =>{
         event.preventDefault()
         const quantity=parseInt(event.target.quantity.value)+parseInt(product.quantity)
-        if(parseInt(quantity)<1){
-            return alert('number of products cannot be less than 0')}
         const updateproduct={quantity}
         fetch(`https://damp-headland-12733.herokuapp.com/products/${id}`,{
             method:'PUT',
@@ -29,12 +28,13 @@ fetch(`https://damp-headland-12733.herokuapp.com/products/${id}`)
         .then(res=>res.json())
         .then(data=>{console.log('success',data)
         setQty(quantity)
-    alert('product updated successfully')})
+        toast.success('product updated successfully')})
+        event.target.quantity.value=''
     }
     const handleDeliveryproduct=event =>{
         event.preventDefault()
         if(parseInt(product.quantity)===0){
-            return alert('stock out')
+            return toast.error('stock out')
         }
         const quantity=parseInt(product.quantity)-1
         const updateproduct={quantity}
@@ -48,27 +48,27 @@ fetch(`https://damp-headland-12733.herokuapp.com/products/${id}`)
         .then(res=>res.json())
         .then(data=>{console.log('success',data)
         setQty(quantity)
-    alert('product delivered successfully')}
+    toast.success('product delivered successfully')}
     )
     }
     return (
         <div  style={{minHeight:'100vh'}}>
         <Container>
-  <Row>
+  <Row xs={1} md={2} className='mt-5 mb-5 border rounded p-3 shadow-lg'>
     <Col><img src={product.img} alt="" srcset="" /></Col>
-    <Col> <h2>Updating Product: {product.name}</h2>
-        <button onClick={handleDeliveryproduct}>delivered</button>
+    <Col style={{marginTop:'6%'}}> <h2>Updating Product: {product.name}</h2>
         <p>Quantity: {qty}</p>
         <p><strong>Features:</strong><br/>{product.description}</p>
-        <form onSubmit={handleUpdateproduct}> 
+        <form onSubmit={handleUpdateproduct} style={{display:'flex',flexDirection:'row',justifyContent:'center'}}> 
 
-                <input type="number" name='quantity' placeholder='enter quantity' required />
+                <input type="number" min={1} name='quantity' placeholder='enter quantity' required />
                 <br/>
-                <input type='submit'   value='add to stock'/>
-            </form></Col>
+                <Button className='rounded pt-1 w-100' size="lg" style={{marginLeft:'1%'}} type="submit">add to stock</Button>
+            </form>
+        <Button variant="success" size="lg" className='mx-auto my-2 w-100'  onClick={handleDeliveryproduct}>delivered</Button></Col>
   </Row>
   </Container>
-       
+       <ToastContainer></ToastContainer>
         </div>
     );
 };

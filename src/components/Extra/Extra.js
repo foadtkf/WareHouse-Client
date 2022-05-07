@@ -11,8 +11,8 @@ const Contact = () => {
   <div class="subscribe-form-title"><h3><strong>Want to stay updated?</strong></h3></div>
   <InputGroup className="mb-3">
     <FormControl
-      placeholder="Recipient's username"
-      aria-label="Recipient's username"
+      placeholder="Your email address"
+      aria-label="Your email address"
       aria-describedby="basic-addon2"
       name="emailbox"
     />

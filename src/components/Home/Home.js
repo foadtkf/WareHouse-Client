@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Carousel } from 'react-bootstrap';
 import Contact from '../Extra/Extra';
+import Extra2 from '../Extra/Extra2';
 import Services from '../Services/Services';
 
 const Home = () => {
@@ -53,6 +54,7 @@ const Home = () => {
         </Carousel>
         <Services val='six'></Services>
         <Contact></Contact>
+        <Extra2></Extra2>
         
         </div>
     );

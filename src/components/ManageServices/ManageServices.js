@@ -1,6 +1,7 @@
 import React from 'react';
-import { Table,Button } from 'react-bootstrap';
+import { Table,Button, Nav } from 'react-bootstrap';
 import useServices from './../../CustomHooks/useServices';
+import { Link, useNavigate } from 'react-router-dom';
 
 const ManageServices = () => {
     const [services,setServices]=useServices();
@@ -17,9 +18,17 @@ const handleDelete=id=>{
             })
     }
 }
+
+const navigate = useNavigate();
+const navigateAddmore = event => {
+    navigate('/addservice');
+}
     return (
         <div className='mx-auto my-4'  style={{minHeight:'100vh'}}>
-            <h2>Remove any products: </h2>
+            <div style={{display:'flex',flexDirection:'row',justifyContent:'center'}}>
+            <h2 style={{marginTop:'0.5%'}}>Remove any products or </h2>
+            <Button className='m-2' variant="success"  size="lg" onClick={()=>navigateAddmore()}>Add more</Button>
+            </div>
             <Table striped bordered hover size="sm">
                 <tbody>
             {

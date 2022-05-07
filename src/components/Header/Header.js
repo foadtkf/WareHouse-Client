@@ -27,7 +27,7 @@ console.log(user)
                             <Nav.Link as={Link} to="home">Home</Nav.Link>
                             <Nav.Link as={Link} to="/services">Items</Nav.Link>
                             <Nav.Link as={Link} to="/myitems">MyItems</Nav.Link>
-                            <Nav.Link as={Link} to="about">About</Nav.Link>
+                            <Nav.Link as={Link} to="/about">About</Nav.Link>
 
                         </Nav>
                         <Nav>
