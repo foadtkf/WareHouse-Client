@@ -53,8 +53,8 @@ const Home = () => {
             </Carousel.Item>
         </Carousel>
         <Services val='six'></Services>
-        <Contact></Contact>
         <Extra2></Extra2>
+        <Contact></Contact>
         
         </div>
     );
