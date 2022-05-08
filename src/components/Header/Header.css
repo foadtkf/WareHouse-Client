@@ -41,3 +41,8 @@
 .header a:hover {
   color: orange;
 }
+@media (max-width:991px) {
+  img#optionalstuff {
+    display: none;
+  }
+}

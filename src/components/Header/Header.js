@@ -36,7 +36,7 @@ console.log(user)
                                 user && <>
                                 <Nav.Link as={Link} to="addservice">AddItems</Nav.Link>
                                 <Nav.Link as={Link} to="manageservice">ManageItems</Nav.Link>
-                                <img height={50} src={user.photoURL}alt="" className="rounded-pill"/>
+                                <img id="optionalstuff" height={50} src={user.photoURL}alt="" className="rounded-pill w-10"/>
                                 </>
                             }
                             {
