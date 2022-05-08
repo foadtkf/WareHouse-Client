@@ -3,7 +3,7 @@ import { Accordion, Col, Container, Row } from 'react-bootstrap';
 
 const Extra2 = () => {
     return (
-        <div className='mb-2'>
+        <div className='mb-5'>
            <Container>
   <Row  xs={1} md={2}>
     <Col className='w-50 h-50'><img className='w-75 h-75' src="https://images.unsplash.com/photo-1471897488648-5eae4ac6686b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="" srcset="" /></Col>

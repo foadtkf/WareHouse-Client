@@ -1,6 +1,5 @@
 # LTHouse💻
-# Link : https://laptop-dokan.web.app/
-And at least five bullet points mentioning your website's different features and functionality.
+# Live Link : https://laptop-dokan.web.app/
 ## Features
 - Hamburger menu
 - Responsive
@@ -22,3 +21,8 @@ And at least five bullet points mentioning your website's different features and
 - Firebase
 - Toastify
 - MongoDB
+
+
+This website is all about managing a laptop warehouse. You can add, update and delete stock list of laptop.
+
+## Stackoverflow Question link: https://stackoverflow.com/questions/72107578/cannot-verify-jwt-err-http-headers-sent-cannot-set-headers-after-they-are-sent

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Carousel } from 'react-bootstrap';
+import { Button, Carousel } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import Contact from '../Extra/Extra';
 import Extra2 from '../Extra/Extra2';
 import Services from '../Services/Services';
@@ -10,6 +11,13 @@ const Home = () => {
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
   };
+  const navigate = useNavigate();
+  const navigateSeemore = event => {
+      navigate('/services');
+  }
+  const navigateManage = event => {
+      navigate('/manageservice');
+  }
     
     return (
         <div>
@@ -53,6 +61,9 @@ const Home = () => {
             </Carousel.Item>
         </Carousel>
         <Services val='six'></Services>
+            <Button className='mt-1 mb-3' variant="success"  size="lg" onClick={()=>navigateSeemore()}>Show all products</Button>
+            <Button className='mt-1 mb-3 mx-3' variant="success"  size="lg" onClick={()=>navigateManage()}>Manage Products</Button>
+            <hr className='w-75 mx-auto'/>
         <Extra2></Extra2>
         <Contact></Contact>
         
