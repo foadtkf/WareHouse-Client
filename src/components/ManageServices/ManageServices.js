@@ -2,6 +2,7 @@ import React from 'react';
 import { Table,Button, Nav } from 'react-bootstrap';
 import useServices from './../../CustomHooks/useServices';
 import { Link, useNavigate } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
 
 const ManageServices = () => {
     const [services,setServices]=useServices();
@@ -16,6 +17,7 @@ const handleDelete=id=>{
                 const remaining=services.filter(service=>service._id !== id)
                 setServices(remaining)
             })
+            toast.error('Deleted Successfully!')
     }
 }
 
@@ -41,6 +43,7 @@ const navigateAddmore = event => {
     </>)
             }
             </tbody>            </Table>
+            <ToastContainer/>
         </div>
     );
 };

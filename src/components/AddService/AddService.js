@@ -58,6 +58,12 @@ const AddService = () => {
           value={localStorage.getItem('email')}
           type="text"
         required/>
+        <input
+          className="mb-2 rounded"
+          {...register("brand")}
+          placeholder="Brand"
+          type="text"
+        required/>
         <input type="submit" />
       </form>
       <ToastContainer/>

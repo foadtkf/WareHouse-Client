@@ -55,10 +55,11 @@ fetch(`https://damp-headland-12733.herokuapp.com/products/${id}`)
         <div  style={{minHeight:'100vh'}}>
         <Container>
   <Row xs={1} md={2} className='mt-5 mb-5 border rounded p-3 shadow-lg'>
-    <Col><img src={product.img} alt="" srcset="" /></Col>
+    <Col><img src={product.img} className='w-75' alt="" srcset="" /></Col>
     <Col style={{marginTop:'6%'}}> <h2>Updating Product: {product.name}</h2>
-        <p>Quantity: {qty}</p>
-        <p><strong>Features:</strong><br/>{product.description}</p>
+        <p><strong>Quantity: {qty}</strong></p>
+        <h6>Brand: {product.brand}</h6>
+        <h5><strong>Features:</strong><br/>{product.description}</h5><br/>
         <form onSubmit={handleUpdateproduct} style={{display:'flex',flexDirection:'row',justifyContent:'center'}}> 
 
                 <input type="number" min={1} name='quantity' placeholder='enter quantity' required />
