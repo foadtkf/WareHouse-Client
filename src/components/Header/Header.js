@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom';
 import logo from '../../logo.jpg'
 const Header = () => {
   const [user] = useAuthState(auth);
-console.log(user)
   const handleSignOut = () => {
     signOut(auth);
     localStorage.setItem('email','')
